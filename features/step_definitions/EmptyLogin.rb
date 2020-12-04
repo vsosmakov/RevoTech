@@ -24,5 +24,5 @@ end
 Then("validate result {string}") do |string|
   response = browser.find_element(xpath: "//div[@Class='formBlock']").text
   log(response)
-  expect(response).to include('Неправильный логин или пароль')
+  expect(response).to include(string)
 end
